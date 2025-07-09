@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  powerwall2pvoutput:
+    build: .
+    container_name: powerwall2pvoutput
+    restart: always
+    env_file:
+      - ./.env
+    environment:
+      - PW_CONFIG_PATH=/app/PW_Config.py
+      - TZ=Australia/Adelaide
+    networks:
+      - powerwall_network
+
+networks:
+  powerwall_network:
+    driver: bridge
+

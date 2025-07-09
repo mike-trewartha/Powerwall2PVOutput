@@ -75,6 +75,7 @@ docker compose up --build --force-recreate -d
 `-d`: Runs the container in detached (background) mode.
 
 ---
+
 ## Monitoring and Logging
 To view the application's logs in real-time:
 ```bash
